@@ -1,8 +1,13 @@
 import Image from "next/image";
-
+import '@/styles/module.home.css';
+import IntroSection from "@/app/ui/home/IntroSection";
+import EventsSection from "@/app/ui/home/eventsSection";
 
 export default function Home() {
   return (
-    <p>Home</p>
+    <main>
+      <IntroSection />
+      <EventsSection />
+    </main>
   );
 }

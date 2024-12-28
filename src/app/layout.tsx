@@ -1,6 +1,7 @@
 
 import "./globals.css";
-import Nav from "./navbar";
+import { inter } from '@/app/ui/fonts';
+import Nav from "./ui/navbar";
 
 export default function RootLayout({
   children,
@@ -9,7 +10,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${inter.className}`}>
         <Nav />
         <main>
         {children}
