@@ -3,6 +3,7 @@
 import {events} from '@/data/events';
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const defaultImagePath = '/gateway-games-low.png'
 
@@ -11,7 +12,8 @@ export default function EventsSection() {
     return (
         <section 
         className="home">
-            {events.map((event, index) => {
+            <h1>Upcoming Events</h1>
+            {events.slice(-3).map((event, index) => {
                 return (
                 // <div
                 // key={index}
@@ -41,6 +43,14 @@ export default function EventsSection() {
                 );
             })
             }
+            <Link
+            href={"/events"}>
+                <p
+                className='text-center text-slate-500'
+                >
+                     - See more events - 
+                </p>
+            </Link>
         </section>
     );
 }

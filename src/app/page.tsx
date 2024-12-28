@@ -5,7 +5,8 @@ import EventsSection from "@/app/ui/home/eventsSection";
 
 export default function Home() {
   return (
-    <main>
+    <main
+    className="max-w-screen-2xl mx-auto">
       <IntroSection />
       <EventsSection />
     </main>
