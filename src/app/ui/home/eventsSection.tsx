@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const defaultImagePath = '/gateway-games-low.png'
+const defaultImagePath = '/gateway-games-low.png';
 
 export default function EventsSection() {
     
@@ -56,7 +56,7 @@ export default function EventsSection() {
 }
 
 function EventCard({title, image, description}: {title: string, image?: string, description: string}) {
-    const [imgSrc, setImgSrc] = useState(image || '/gateway-games-low.png');
+    const [imgSrc, setImgSrc] = useState(image || defaultImagePath);
 
     return (
         <div className="event-card flex flex-row my-4 ring">
@@ -65,7 +65,7 @@ function EventCard({title, image, description}: {title: string, image?: string, 
                 alt={title}
                 width={128} // Adjust width as needed
                 height={128} // Adjust height as needed
-                onError={() => setImgSrc('/gateway-games-low.png')} // Fallback to default image
+                onError={() => setImgSrc(defaultImagePath)} // Fallback to default image
             />
             <div 
             className='block'>
