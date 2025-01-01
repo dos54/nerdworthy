@@ -3,7 +3,6 @@ import { news } from '@/data/news';
 export default function LatestNews() {
     const {
         title,
-        image,
         description,
         content
     } = news[news.length-1];
