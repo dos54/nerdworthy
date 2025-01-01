@@ -14,9 +14,9 @@ export default function EventCard({title, image, description}: {title: string, i
             <Image
                 src={imgSrc}
                 alt={title}
-                width={128} // Adjust width as needed
-                height={128} // Adjust height as needed
-                onError={() => setImgSrc(defaultImagePath)} // Fallback to default image
+                width={128}
+                height={128}
+                onError={() => setImgSrc(defaultImagePath)}
             />
             <div 
             className='block'>

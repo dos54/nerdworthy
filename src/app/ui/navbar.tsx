@@ -13,6 +13,9 @@ export default function Nav() {
             >
                 <GatewayGamesLogo />
             </Link>
+            <h1
+            className="mx-auto text-4xl md:text-6xl"
+            >Nerdworthy</h1>
         </div>
         <div className="">
             <Menu />

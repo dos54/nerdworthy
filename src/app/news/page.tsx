@@ -1,7 +1,8 @@
+import LatestNews from "@/app/ui/news/latestNews";
 
 export default function News() {
 
     return (
-        <h1>News Page</h1>
+        <LatestNews />
     );
 }

@@ -1,35 +1,65 @@
 'use client';
 
-import {events} from '@/data/events';
-import Link from 'next/link';
+import { useState } from 'react';
+import { events } from '@/data/events';
 import EventCard from '@/app/ui/eventCard';
 
 export default function EventsSection() {
-    
-    return (
-        <section 
-        className="home">
-            <h1>Upcoming Events</h1>
-            {events.slice(-3).map((event, index) => {
-                return (
+    // State to manage how many events are displayed
+    const [visibleCount, setVisibleCount] = useState(3);
 
-                <EventCard 
+    // Function to reveal all events
+    const RevealEvents = () => {
+        setVisibleCount(events.length); // Set visibleCount to the total number of events
+    };
+
+    const HideEvents = () => {
+        setVisibleCount(3);
+    };
+
+    return (
+        <section className="home">
+            <h1>Upcoming Events</h1>
+
+            {/* Display visible events */}
+            {[...events].reverse().slice(0, visibleCount).map((event, index) => (
+                <EventCard
                     key={index}
                     title={event.title}
                     image={event.image}
                     description={event.description}
                 />
-                );
-            })
-            }
-            <Link
-            href={"/events"}>
-                <p
-                className='text-center text-slate-500'
+            ))}
+
+            {/* Show the "See more events" button only if not all events are visible */}
+            {visibleCount < events.length && (
+                <div
+                    className="mx-auto w-auto cursor-pointer"
+                    onClick={RevealEvents}
                 >
-                     - See more events - 
-                </p>
-            </Link>
+                    <p className="text-center text-slate-500">
+                        - See more events -
+                    </p>
+                    <p className="text-center text-slate-500">
+                        V
+                    </p>
+                </div>
+            )}
+
+            {visibleCount >= events.length && (
+                <div
+                    className="mx-auto w-auto cursor-pointer"
+                    onClick={HideEvents}
+                >
+                    <p className="text-center text-slate-500">
+                        ^
+                    </p>
+                    <p className="text-center text-slate-500">
+                        - Minimize -
+                    </p>
+                </div>
+            )
+            }
         </section>
     );
 }

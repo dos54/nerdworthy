@@ -9,7 +9,8 @@ const links = [
     { name: 'News', href: '/news'},
     { name: "Blog", href: '/blog'},
     { name: 'Gateway Games', href: '/gateway-games'},
-    { name: 'Gallery', href: '/gallery'}
+    { name: 'Gallery', href: '/gallery'},
+    { name: 'Events', href: '/events'},
 ]
 
 export default function NavLinks() {
