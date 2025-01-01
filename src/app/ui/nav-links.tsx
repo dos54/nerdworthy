@@ -6,11 +6,11 @@ import clsx from 'clsx';
 
 const links = [
     { name: 'Home', href: '/'},
-    { name: 'News', href: '/news'},
-    { name: "Blog", href: '/blog'},
     { name: 'Gateway Games', href: '/gateway-games'},
-    { name: 'Gallery', href: '/gallery'},
+    { name: 'News', href: '/news'},
     { name: 'Events', href: '/events'},
+    { name: "Blog", href: '/blog'},
+    { name: 'Gallery', href: '/gallery'},
 ]
 
 export default function NavLinks() {
