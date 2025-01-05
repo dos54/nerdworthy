@@ -26,11 +26,7 @@ export default async function Events() {
 
         const events = await sql('SELECT title, image, description FROM events');
 
-        return events.map((row: any) => ({
-            title: row.title,
-            image: row.image,
-            description: row.description,
-        }));
+        return events;
     }
 
     const events = await getEvents();
