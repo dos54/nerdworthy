@@ -3,7 +3,13 @@
 import { useState } from 'react';
 import EventCard from '@/app/ui/events/eventCard';
 
-export default function EventsSection({events}: {events: any[]}) {
+type Event = {
+    title: string;
+    image: string;
+    description: string;
+}
+
+export default function EventsSection({events}: {events: Event[]}) {
     // State to manage how many events are displayed
     const [visibleCount, setVisibleCount] = useState(3);
 
