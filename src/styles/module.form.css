@@ -1,0 +1,22 @@
+.web-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid slategrey;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.web-form * {
+    display: block;
+}
+
+.web-form button[type=submit]:hover {
+    background-color: aliceblue;
+}
+
+.web-form button[type=submit] {
+    background-color: whitesmoke;
+    max-width: 10rem;
+    border: 1px solid black;
+    border-radius: 6px;
+}

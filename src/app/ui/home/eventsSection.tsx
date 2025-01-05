@@ -1,10 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { events } from '@/data/events';
-import EventCard from '@/app/ui/eventCard';
+import EventCard from '@/app/ui/events/eventCard';
 
-export default function EventsSection() {
+export default function EventsSection({events}: {events: any[]}) {
     // State to manage how many events are displayed
     const [visibleCount, setVisibleCount] = useState(3);
 
@@ -46,7 +45,8 @@ export default function EventsSection() {
                 </div>
             )}
 
-            {visibleCount >= events.length && (
+
+            {visibleCount >= events.length && events.length > 3 && (
                 <div
                     className="mx-auto w-auto cursor-pointer"
                     onClick={HideEvents}
