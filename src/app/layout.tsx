@@ -12,7 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} `}>
         <Nav />
-        <main className="max-w-screen-2xl mx-4 2xl:mx-auto my-6">
+        <main className="max-w-screen-2xl mx-4 2xl:mx-auto my-6 md:my-12">
         {children}
         </main>
       </body>

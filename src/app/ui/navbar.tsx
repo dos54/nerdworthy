@@ -6,7 +6,7 @@ export default function Nav() {
 
     return (
         <div>
-        <div className="flex grow flex-row justify-between items-center gap-3 rounded-md bg-blue-500 p-4">
+        <div className="grid grid-cols-[auto_1fr_auto] w-full items-center gap-3 rounded-md bg-blue-500 p-4">
             <Link
                 href="/"
                 className="mr-16"
@@ -14,12 +14,12 @@ export default function Nav() {
                 <GatewayGamesLogo />
             </Link>
             <h1
-            className="mx-auto text-4xl md:text-6xl"
+            className=" w-full text-left text-3xl md:mx-auto md:text-6xl invisible md:visible"
             >Nerdworthy</h1>
-        </div>
-        <div className="">
+            
             <Menu />
         </div>
+
         </div>
     );
 }
